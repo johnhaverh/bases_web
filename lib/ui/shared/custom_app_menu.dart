@@ -15,9 +15,7 @@ class CustomAppMenu extends StatelessWidget {
             text: "Contador Sateful", 
             onPressed: ()=> Navigator.pushNamed(context, '/stateful'),
             color: Colors.black),
-          
           const SizedBox(width: 10,),
-
           CustomFlatButton(
             text: "Contador Provider", 
              onPressed: ()=> Navigator.pushNamed(context, '/provider'),
