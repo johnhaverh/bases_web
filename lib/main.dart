@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
       title: 'Rutas App',
       initialRoute: '/stateful',
       routes: {
-        '/stateful': ( _ ) => CounterPage()
+        '/stateful': ( _ ) => const CounterPage()
       }
     );
   }
