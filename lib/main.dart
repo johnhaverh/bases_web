@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       //   '/provider': ( _ ) => const CounterProviderPage(),
       //   //'/404': ( _ ) => const CounterPage()
       // },
-      onGenerateRoute: RouterGenerator.generateRoute,
+      onGenerateRoute: RouteGenerator.generateRoute,
     );
   }
 }

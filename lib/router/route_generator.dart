@@ -3,7 +3,7 @@ import 'package:bases_web/ui/pages/counter_page.dart';
 import 'package:bases_web/ui/pages/counter_provider_page.dart';
 import 'package:bases_web/ui/pages/page_404.dart';
 
-class RouterGenerator {
+class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings){
     switch(settings.name){
       case '/stateful':
