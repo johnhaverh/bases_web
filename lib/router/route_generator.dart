@@ -7,12 +7,23 @@ class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings){
     switch(settings.name){
       case '/stateful':
-        return  MaterialPageRoute(builder: (_) => CounterPage() );
+        return  _fadeRoute(CounterPage(), '/stateful');
       case '/provider':
-        return MaterialPageRoute(builder: (_) => CounterProviderPage() );
+        return  _fadeRoute(CounterProviderPage(), '/provider');
       default:
-        return MaterialPageRoute(builder: (_) => Page404() );
-
+        return  _fadeRoute(Page404(), '/404');
     }
   }
+
+  static PageRoute _fadeRoute( Widget child, String routeName){
+    return PageRouteBuilder(
+      settings: RouteSettings(name:routeName),
+      pageBuilder: ( _, __, ___ ) => child,
+      transitionsBuilder: ( _, animation, __, ___ ) => 
+        FadeTransition(
+          opacity: animation,
+          child: child,
+        )
+    );
+  }   
 }
