@@ -11,11 +11,23 @@ class CustomAppMenu extends StatelessWidget {
       height: 50,
       child: Row(
         children:[
-          CustomFlatButton(text: "Contador Sateful", onPressed: (){},color: Colors.black),
+          CustomFlatButton(
+            text: "Contador Sateful", 
+            onPressed: ()=> Navigator.pushNamed(context, '/stateful'),
+            color: Colors.black),
+          
           const SizedBox(width: 10,),
-          CustomFlatButton(text: "Contador Provider", onPressed: (){},color: Colors.black),
+
+          CustomFlatButton(
+            text: "Contador Provider", 
+             onPressed: ()=> Navigator.pushNamed(context, '/provider'),
+            color: Colors.black),
           const SizedBox(width: 10,),
-          CustomFlatButton(text: "Otra pagina", onPressed: (){},color: Colors.black)
+          CustomFlatButton(
+            text: "Otra pagina", 
+            onPressed: ()=> Navigator.pushNamed(context, '/404'),
+            color: Colors.black)
+          
         ]
       )
     );

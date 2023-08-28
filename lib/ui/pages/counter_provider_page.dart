@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:bases_web/ui/shared/custom_app_menu.dart';
 import 'package:bases_web/ui/shared/custom_flat_button.dart';
 
-class CounterPage extends StatefulWidget {
-  const CounterPage({Key? key}) : super(key: key);
+class CounterProviderPage extends StatefulWidget {
+  const CounterProviderPage({Key? key}) : super(key: key);
 
   @override
-  State<CounterPage> createState() => _CounterPageState();
+  State<CounterProviderPage> createState() => _CounterProviderPageState();
 }
 
-class _CounterPageState extends State<CounterPage> {
-  int counter=0;
+class _CounterProviderPageState extends State<CounterProviderPage> {
+  int counter=15;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +19,7 @@ class _CounterPageState extends State<CounterPage> {
         children: [
           const CustomAppMenu(),
           const Spacer(),
-          const Text("Contador Stateful",style: TextStyle(fontSize:20),),
+          const Text("Contador Provider",style: TextStyle(fontSize:20),),
 
           FittedBox(
             fit: BoxFit.contain,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:bases_web/ui/pages/counter_provider_page.dart';
 import 'package:bases_web/ui/pages/counter_page.dart';
 
 void main() => runApp(MyApp());
@@ -11,7 +12,9 @@ class MyApp extends StatelessWidget {
       title: 'Rutas App',
       initialRoute: '/stateful',
       routes: {
-        '/stateful': ( _ ) => const CounterPage()
+        '/stateful': ( _ ) => const CounterPage(),
+        '/provider': ( _ ) => const CounterProviderPage(),
+        //'/404': ( _ ) => const CounterPage()
       }
     );
   }
